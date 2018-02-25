@@ -17,7 +17,7 @@ with open(os.path.join(_HERE, 'README.rst'),'r+') as fh:
 
 setup(
     name = "dbETL",
-    version = "0.0,1",
+    version = "0.0.4",
     description = "database batch ETL helper",
     long_description = long_description,
     author = "Shichao(Richard) Ji",
@@ -36,6 +36,7 @@ setup(
       ],
     entry_points={
         'console_scripts': ['dbETL=dbETL:main'],
+        'console_scripts': ['dbpreset=dbETL:preset'],        
       },
 )
 
