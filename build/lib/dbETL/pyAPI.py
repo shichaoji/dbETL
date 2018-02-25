@@ -8,11 +8,12 @@ import requests
 import imp
 
 try:
-    key = imp.load_source('key','secret.py')
+    secret = imp.load_source('key','secret.py')
 except:
     print 'plase create secret.py with key="apikey=yourapi"'
     exit(0)
 
+key=secret.key
 print key
 
 SS = "https://storage.scrapinghub.com/items/276632/";
