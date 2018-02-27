@@ -1,6 +1,7 @@
 README.rst
 setup.py
 dbETL/__init__.py
+dbETL/batch2mysql.py
 dbETL/pyAPI.py
 dbETL.egg-info/PKG-INFO
 dbETL.egg-info/SOURCES.txt

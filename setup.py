@@ -17,7 +17,7 @@ with open(os.path.join(_HERE, 'README.rst'),'r+') as fh:
 
 setup(
     name = "dbETL",
-    version = "0.0.6",
+    version = "0.0.7",
     description = "database batch ETL helper",
     long_description = long_description,
     author = "Shichao(Richard) Ji",
