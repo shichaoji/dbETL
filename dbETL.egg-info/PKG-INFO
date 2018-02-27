@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: dbETL
-Version: 0.0.7
+Version: 0.0.8
 Summary: database batch ETL helper
 Home-page: https://github.com/shichaoji/dbETL
 Author: Shichao(Richard) Ji

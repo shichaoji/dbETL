@@ -60,6 +60,7 @@ def BatchInsert(df):
     df=df[['post_ID','date','comments','favor','views']]
     batch = [df.iloc[n*10000:(n+1)*10000,:] for n in range(0 ,int(df.shape[0]/10000.0)+1)]
     
+    print 'batch length',len(batch)
     start=time()
     n=0
     for d in batch:
@@ -68,13 +69,13 @@ def BatchInsert(df):
         n+=1
         cur.execute(sql)
         db.commit()
-        print n,'{:.2f}s |'.format(time()-start),
+        print n,':{:.2f}s '.format(time()-start),
         start=time()
 
     
 if __name__=='__main__':
     path='data/'
-    path=raw_input('path of csv files')
+    path=raw_input('path of csv files: ')
     if path[-1]!='/':
         path=path+'/'
     
@@ -85,5 +86,5 @@ if __name__=='__main__':
         df = getDF(i)
         BatchInsert(df)
         del df
-        print n,'used {:.2f} s '.format(time()-start)
+        print 'used {:.2f} s '.format(time()-start)
         start=time()
